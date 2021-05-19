@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration form</title>
+
+    <!--Author and desctiption of project-->
+    <meta name="author" content="Harsh Agarwal">
+    <meta name="description" content="Form with login and registration credentials">
+
+    <!--Linking font awesome for icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+    <!--Linking CSS style sheet-->
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+
+    <!--------------Heading of the page-------------->
+    <div class="heading form-style">
+        <h1>Log In/Sign Up</h1>
+    </div>
+    <!---------xx------Heading of the page------xx-------->
+
+    <!----------------Form region------------------->
+
+    <div class="form-style">
+
+        <!-----------------Toggle page options design-------------------->
+
+
+        <!-----------Toggle design for sign in part-------------->
+        <div class="options" id="options">
+            <button class="signin" onclick="login()">Sign In</a>
+            <button class="signup" onclick="register()">Sign Up</a>
+        </div>
+        <!-------xx----Toggle design for sign in part----xx---------->        
+
+        <!-----------Toggle design for sign up part-------------->
+        <div class="options-2" id="options-2">
+            <button class="signin" onclick="login()">Sign In</a>
+            <button class="signup" onclick="register()">Sign Up</a>
+        </div>
+        <!-------xx----Toggle design for sign up part----xx---------->
+
+
+        <!------------xx-----Toggle page options design--------xx------------>
+
+
+        <!------------Social Media icons using font awesome------------>
+
+        <div class="sm-icons">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
+
+        <!-------xx-----Social Media icons using font awesome-----xx-------->
+
+
+        <!-------------------------Form content-------------------------->
+
+
+        <!-------------Form content for sign in/login part-------------->
+        <div class="form-entry form-1" id="form-1">
+            <form action="" method="POST" target="_blank">
+                <input type="text" name="name" id="name" placeholder="Client Name" required><br>
+                <input type="password" name="pwd" id="pwd" placeholder="Client Password" required><br>
+                <label>
+                    <input type="checkbox" name="rememberPwd" id="rmbpwd">Remember Password
+                </label><br>
+                <input type="submit" value="Log In" id="btn">
+            </form>
+        </div>
+        <!-------xx------Form content for sign in/login part-----xx--------->
+
+        <!-------------Form content for sign up part-------------->
+        <div class="form-entry form-2" id="form-2">
+            <form action="" method="POST" target="_blank">
+                <input type="text" name="name" id="name" placeholder="Name" required><br>
+                <input type="email" name="email" id="email" placeholder="Your E-mail" required><br>
+                <input type="password" name="pwd" id="pwd" placeholder="Create a Password" required><br>
+                <label>
+                    <input type="checkbox" name="remember" id="rmb">Remember Password
+                </label><br>
+                <input type="submit" value="Sign Up" id="btn">
+            </form>
+        </div>
+        <!--------xx-----Form content for sign up part------xx-------->
+
+
+        <!------------------xx-------Form content--------xx------------------>
+        
+    </div>
+
+    <!-----------xx-----Form region-----xx-------------->
+
+    <!--------------Javascript for changing orientations--------------->
+    <script>
+
+        function register() {
+            document.getElementById("form-2").style.display = "initial";
+            document.getElementById("form-1").style.display = "none";
+            document.getElementById("options-2").style.display = "initial";
+            document.getElementById("options").style.display = "none";
+        }
+        function login() {
+            document.getElementById("form-1").style.display = "initial";
+            document.getElementById("form-2").style.display = "none";
+            document.getElementById("options").style.display = "initial";
+            document.getElementById("options-2").style.display = "none";
+        }
+
+    </script>
+    <!----------xx----Javascript for changing orientations----xx----------->
+
+</body>
+</html>
